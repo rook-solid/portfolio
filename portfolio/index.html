@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="セキュリティエンジニアのポートフォリオサイト。脆弱性診断、クラウドインフラ構築、OSSへの貢献など、実績をご紹介します。" />
+  <meta property="og:title" content="rook-solid | Security Engineer Portfolio" />
+  <meta property="og:description" content="セキュリティエンジニアのポートフォリオ。Webシステムの脆弱性診断やセキュアなインフラ構築をメインに行っています。" />
+  <meta property="og:type" content="website" />
+  <title>rook-solid | Security Engineer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#hero" class="nav__logo">RS<span class="nav__logo-dot">.</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+        <li>
+          <a href="#contact" class="nav__cta">お問い合わせ</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-grid" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow">
+            <span class="hero__status-dot"></span>
+            セキュリティエンジニア
+          </p>
+          <h1 class="hero__title">
+            堅牢なシステムで<br /><em>世界を守る</em><br />エンジニア。
+          </h1>
+          <p class="hero__desc">
+            Webシステム・アプリケーションのセキュリティ強化に幅広く対応。<br />
+            脆弱性診断やセキュア設計を通じて、安全なプロダクトを構築します。
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">実績を見る</a>
+            <a href="#contact" class="btn btn--ghost">連絡する</a>
+          </div>
+          <div class="hero__badges">
+            <span class="badge">TypeScript</span>
+            <span class="badge">React</span>
+            <span class="badge">Go</span>
+            <span class="badge">AWS</span>
+            <span class="badge">Docker</span>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__code-card">
+            <div class="code-card__header">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="code-card__filename">portfolio.ts</span>
+            </div>
+            <pre class="code-card__body"><code><span class="c-kw">const</span> <span class="c-fn">engineer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">"rook-solid"</span>,
+  <span class="c-prop">role</span>: <span class="c-str">"Security Engineer"</span>,
+  <span class="c-prop">skills</span>: [
+    <span class="c-str">"Security"</span>, <span class="c-str">"PenTest"</span>,
+    <span class="c-str">"Go"</span>, <span class="c-str">"AWS"</span>,
+  ],
+  <span class="c-prop">passion</span>: <span class="c-str">"Building secure"</span>
+           + <span class="c-str">" products"</span>,
+  <span class="c-prop">available</span>: <span class="c-bool">true</span>,
+};</code></pre>
+          </div>
+          <div class="hero__float-badge hero__float-badge--1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            GitHub 500+ contributions
+          </div>
+          <div class="hero__float-badge hero__float-badge--2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            3年以上の経験
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__label">About Me</p>
+          <h2 class="section__title">自己紹介</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__image-wrap">
+            <div class="about__image-frame">
+              <img src="assets/images/avatar.png" alt="rook-solid のプロフィール写真" class="about__avatar" width="400"
+                height="400" />
+              <div class="about__image-deco" aria-hidden="true"></div>
+            </div>
+            <div class="about__stats">
+              <div class="stat">
+                <span class="stat__number">3+</span>
+                <span class="stat__label">年の経験</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">20+</span>
+                <span class="stat__label">プロジェクト</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">8+</span>
+                <span class="stat__label">技術スタック</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__content">
+            <p class="about__lead">
+              こんにちは！rook-solidです。<br />
+              セキュリティエンジニアとして、スタートアップから大規模サービスまで幅広くセキュリティ強化に携わってきました。
+            </p>
+            <p class="about__body">
+              Webアプリケーションやシステム基盤の脆弱性診断、セキュリティ要件定義を得意とし、
+              AWSをはじめとするクラウドインフラのセキュアな設計・運用も手がけています。
+              「堅牢かつ柔軟」なアーキテクチャを追求し、安全なプロダクトの提供に注力しています。
+            </p>
+            <p class="about__body">
+              コードを書く以外にも、技術ブログへの執筆やOSSへのコントリビューションを行っています。
+              新しい技術を学ぶことが大好きで、日々新しいことに挑戦しています。
+            </p>
+            <div class="about__info-grid">
+              <div class="about__info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>東京都</span>
+              </div>
+              <div class="about__info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+                <span>セキュリティエンジニア</span>
+              </div>
+              <div class="about__info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span>リモート可・副業可</span>
+              </div>
+              <div class="about__info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+                <span>現在、新規案件を受付中</span>
+              </div>
+            </div>
+            <div class="about__actions">
+              <a href="#contact" class="btn btn--primary">お問い合わせ</a>
+              <a href="assets/resume.pdf" class="btn btn--outline" download>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                職務経歴書 (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__label">Skills</p>
+          <h2 class="section__title">技術スタック</h2>
+          <p class="section__desc">日々のプロジェクトで使用している主要な技術・ツールです。</p>
+        </div>
+
+        <div class="skills__categories">
+
+          <!-- Frontend -->
+          <div class="skill-category" data-aos>
+            <div class="skill-category__header">
+              <div class="skill-category__icon skill-category__icon--blue">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <path d="M3 9h18M9 21V9" />
+                </svg>
+              </div>
+              <h3 class="skill-category__title">フロントエンド</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">TypeScript</span>
+                  <span class="skill-item__level">Expert</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar__fill" style="--skill-pct: 95%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">React / Next.js</span>
+                  <span class="skill-item__level">Expert</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar__fill" style="--skill-pct: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">CSS / Sass</span>
+                  <span class="skill-item__level">Proficient</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar__fill" style="--skill-pct: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">Vue.js</span>
+                  <span class="skill-item__level">Intermediate</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar__fill" style="--skill-pct: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category" data-aos>
+            <div class="skill-category__header">
+              <div class="skill-category__icon skill-category__icon--green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <h3 class="skill-category__title">バックエンド</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">Go</span>
+                  <span class="skill-item__level">Expert</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar__fill skill-bar__fill--green" style="--skill-pct: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">Node.js / Express</span>
+                  <span class="skill-item__level">Expert</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar__fill skill-bar__fill--green" style="--skill-pct: 88%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">Python / FastAPI</span>
+                  <span class="skill-item__level">Proficient</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar__fill skill-bar__fill--green" style="--skill-pct: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">PostgreSQL / MySQL</span>
+                  <span class="skill-item__level">Proficient</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar__fill skill-bar__fill--green" style="--skill-pct: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infrastructure -->
+          <div class="skill-category" data-aos>
+            <div class="skill-category__header">
+              <div class="skill-category__icon skill-category__icon--purple">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+              </div>
+              <h3 class="skill-category__title">インフラ / DevOps</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">AWS (EC2, RDS, S3, Lambda)</span>
+                  <span class="skill-item__level">Expert</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar__fill skill-bar__fill--purple" style="--skill-pct: 88%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">Docker / Kubernetes</span>
+                  <span class="skill-item__level">Proficient</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar__fill skill-bar__fill--purple" style="--skill-pct: 82%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">Terraform / IaC</span>
+                  <span class="skill-item__level">Proficient</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar__fill skill-bar__fill--purple" style="--skill-pct: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">GitHub Actions / CI/CD</span>
+                  <span class="skill-item__level">Expert</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar__fill skill-bar__fill--purple" style="--skill-pct: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category skill-category--tools" data-aos>
+            <div class="skill-category__header">
+              <div class="skill-category__icon skill-category__icon--orange">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+              </div>
+              <h3 class="skill-category__title">ツール / その他</h3>
+            </div>
+            <div class="tools-grid">
+              <span class="tool-chip">Git / GitHub</span>
+              <span class="tool-chip">VS Code</span>
+              <span class="tool-chip">Figma</span>
+              <span class="tool-chip">Jira</span>
+              <span class="tool-chip">Notion</span>
+              <span class="tool-chip">Slack</span>
+              <span class="tool-chip">Linux / Bash</span>
+              <span class="tool-chip">GraphQL</span>
+              <span class="tool-chip">REST API</span>
+              <span class="tool-chip">Redis</span>
+              <span class="tool-chip">Elasticsearch</span>
+              <span class="tool-chip">Prisma</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__label">Projects</p>
+          <h2 class="section__title">制作実績</h2>
+          <p class="section__desc">これまでに携わった主なプロジェクトをご紹介します。</p>
+        </div>
+
+        <div class="projects__grid">
+
+          <!-- Project 1 -->
+          <article class="project-card project-card--featured" data-aos>
+            <div class="project-card__header">
+              <div class="project-card__labels">
+                <span class="project-tag project-tag--featured">Featured</span>
+                <span class="project-tag">Web App</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="icon-link" aria-label="GitHubリポジトリを見る" target="_blank" rel="noopener">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="デモサイトを開く" target="_blank" rel="noopener">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__visual">
+              <div class="project-placeholder project-placeholder--1" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">TaskFlow — チーム向けタスク管理SaaS</h3>
+              <p class="project-card__desc">
+                リアルタイム同期機能を持つチーム向けタスク管理アプリ。WebSocketを活用し、
+                複数ユーザーが同時に編集してもコンフリクトなく動作するアーキテクチャを設計・実装しました。
+              </p>
+              <div class="project-card__tech">
+                <span>Next.js</span><span>TypeScript</span><span>Go</span>
+                <span>PostgreSQL</span><span>WebSocket</span><span>AWS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-aos>
+            <div class="project-card__header">
+              <div class="project-card__labels">
+                <span class="project-tag">API</span>
+                <span class="project-tag">OSS</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="icon-link" aria-label="GitHubリポジトリを見る" target="_blank" rel="noopener">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="デモサイトを開く" target="_blank" rel="noopener">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__visual">
+              <div class="project-placeholder project-placeholder--2" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">go-cache-kit — Go製キャッシュライブラリ</h3>
+              <p class="project-card__desc">
+                インメモリーLRUキャッシュとRedisを統合したGoライブラリ。
+                GitHub Star 200+を獲得し、複数のプロダクションサービスで採用されています。
+              </p>
+              <div class="project-card__tech">
+                <span>Go</span><span>Redis</span><span>OSS</span><span>GitHub Actions</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-aos>
+            <div class="project-card__header">
+              <div class="project-card__labels">
+                <span class="project-tag">Mobile</span>
+                <span class="project-tag">Security</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="icon-link" aria-label="GitHubリポジトリを見る" target="_blank" rel="noopener">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="デモサイトを開く" target="_blank" rel="noopener">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__visual">
+              <div class="project-placeholder project-placeholder--3" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">ConnectLocal — 地域コミュニティアプリ</h3>
+              <p class="project-card__desc">
+                地域イベントやコミュニティをつなぐWebアプリ。
+                位置情報API・タイムライン機能・通知システムをフルスクラッチで実装しました。
+              </p>
+              <div class="project-card__tech">
+                <span>React</span><span>Node.js</span><span>MongoDB</span>
+                <span>Maps API</span><span>Firebase</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-aos>
+            <div class="project-card__header">
+              <div class="project-card__labels">
+                <span class="project-tag">Infrastructure</span>
+                <span class="project-tag">IaC</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="icon-link" aria-label="GitHubリポジトリを見る" target="_blank" rel="noopener">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="デモサイトを開く" target="_blank" rel="noopener">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__visual">
+              <div class="project-placeholder project-placeholder--4" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  aria-hidden="true">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">aws-starter-kit — AWSインフラテンプレート</h3>
+              <p class="project-card__desc">
+                Terraformで管理されたAWSマルチアカウント構成のテンプレート。
+                VPC・ECS・RDS・ALBを含むプロダクション対応構成をコード化しました。
+              </p>
+              <div class="project-card__tech">
+                <span>Terraform</span><span>AWS</span><span>ECS</span>
+                <span>GitHub Actions</span><span>OSS</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__label">Contact</p>
+          <h2 class="section__title">お問い合わせ</h2>
+          <p class="section__desc">
+            お仕事のご依頼・ご相談はお気軽にご連絡ください。<br />
+            通常2営業日以内にご返信いたします。
+          </p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info">
+            <div class="contact__links">
+              <a href="https://github.com/" class="contact-link" target="_blank" rel="noopener" id="contact-github">
+                <div class="contact-link__icon contact-link__icon--github">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </div>
+                <div class="contact-link__text">
+                  <span class="contact-link__label">GitHub</span>
+                  <span class="contact-link__value">@rook-solid</span>
+                </div>
+                <svg class="contact-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </a>
+
+              <a href="https://twitter.com/" class="contact-link" target="_blank" rel="noopener" id="contact-twitter">
+                <div class="contact-link__icon contact-link__icon--twitter">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </div>
+                <div class="contact-link__text">
+                  <span class="contact-link__label">X (Twitter)</span>
+                  <span class="contact-link__value">@rook-solid</span>
+                </div>
+                <svg class="contact-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </a>
+
+              <a href="https://www.linkedin.com/" class="contact-link" target="_blank" rel="noopener"
+                id="contact-linkedin">
+                <div class="contact-link__icon contact-link__icon--linkedin">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </div>
+                <div class="contact-link__text">
+                  <span class="contact-link__label">LinkedIn</span>
+                  <span class="contact-link__value">rook-solid</span>
+                </div>
+                <svg class="contact-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </a>
+
+              <a href="mailto:rook-solid@example.com" class="contact-link" id="contact-email">
+                <div class="contact-link__icon contact-link__icon--email">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div class="contact-link__text">
+                  <span class="contact-link__label">メール</span>
+                  <span class="contact-link__value">rook-solid@example.com</span>
+                </div>
+                <svg class="contact-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="contact__availability">
+              <div class="availability-dot"></div>
+              <p>現在、<strong>新規案件を受付中</strong>です。お気軽にお声がけください。</p>
+            </div>
+          </div>
+
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="contact-name">お名前 <span class="form-required">*</span></label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="山田 太郎" required
+                autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-email-input">メールアドレス <span class="form-required">*</span></label>
+              <input type="email" id="contact-email-input" name="email" class="form-input"
+                placeholder="yamada@example.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">件名</label>
+              <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="お仕事のご相談"
+                autocomplete="off" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-message">メッセージ <span class="form-required">*</span></label>
+              <textarea id="contact-message" name="message" class="form-input form-textarea"
+                placeholder="ご依頼の内容やご質問をお書きください。" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="contact-submit">
+              <span class="btn__text">送信する</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+            <p class="form-note">※ このフォームはデモです。実際には送信されません。</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2025 rook-solid. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="#hero">トップへ</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      aria-hidden="true">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

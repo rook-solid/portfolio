@@ -1,0 +1,6 @@
+# Cloudflare Pages – Redirects
+# SPA でないため、基本的なリダイレクトのみ設定します。
+# 必要に応じて追加してください。
+
+# Example: 旧URLから新URLへのリダイレクト
+# /old-page  /new-page  301
