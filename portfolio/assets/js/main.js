@@ -97,12 +97,24 @@
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.05, rootMargin: '0px 0px -40px 0px' }
   );
 
   aosEls.forEach((el, i) => {
     el.dataset.aosDelay = i * 80; // stagger by index
     aosObserver.observe(el);
+  });
+
+  // ページロード時に既に viewport 内にある要素を即表示
+  window.addEventListener('load', () => {
+    aosEls.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        const delay = el.dataset.aosDelay || 0;
+        setTimeout(() => el.classList.add('aos-in'), Number(delay));
+        aosObserver.unobserve(el);
+      }
+    });
   });
 
   /* =====================================================
