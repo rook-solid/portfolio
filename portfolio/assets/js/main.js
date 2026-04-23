@@ -14,6 +14,24 @@
   const contactForm = document.getElementById('contactForm');
 
   /* =====================================================
+     2. Active nav highlight (intersection-style via scroll)
+     ===================================================== */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinkEls = document.querySelectorAll('.nav__link');
+
+  function highlightActiveNav(scrollY) {
+    let current = '';
+    sections.forEach((sec) => {
+      const top = sec.offsetTop - 100;
+      if (scrollY >= top) current = sec.id;
+    });
+    navLinkEls.forEach((link) => {
+      const href = link.getAttribute('href')?.replace('#', '');
+      link.classList.toggle('active', href === current);
+    });
+  }
+
+  /* =====================================================
      1. Header – add .scrolled class on scroll
      ===================================================== */
   const onScroll = () => {
@@ -31,24 +49,6 @@
 
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll(); // initial call
-
-  /* =====================================================
-     2. Active nav highlight (intersection-style via scroll)
-     ===================================================== */
-  const sections = document.querySelectorAll('section[id]');
-  const navLinkEls = document.querySelectorAll('.nav__link');
-
-  function highlightActiveNav(scrollY) {
-    let current = '';
-    sections.forEach((sec) => {
-      const top = sec.offsetTop - 100;
-      if (scrollY >= top) current = sec.id;
-    });
-    navLinkEls.forEach((link) => {
-      const href = link.getAttribute('href')?.replace('#', '');
-      link.classList.toggle('active', href === current);
-    });
-  }
 
   /* =====================================================
      3. Mobile nav toggle
